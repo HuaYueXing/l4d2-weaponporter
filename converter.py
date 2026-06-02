@@ -43,9 +43,17 @@ def _read_text(path):
 def _read_addoninfo_pairs(path):
     text = _read_text(path)
     pairs = []
-    for m in re.finditer(r'"([^"]+)"\s+"([^"]*)"', text):
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or line in ("{", "}"):
+            continue
+        if line.startswith("//") or line.startswith("#"):
+            continue
+        m = re.match(r'^"?([^"\s{}]+)"?\s+(?:"([^"]*)"|([^\s{}]+))', line)
+        if not m:
+            continue
         key = m.group(1).strip()
-        value = m.group(2).strip()
+        value = (m.group(2) if m.group(2) is not None else m.group(3) or "").strip()
         if key.lower() != "addoninfo":
             pairs.append((key, value))
     return pairs
