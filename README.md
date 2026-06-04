@@ -18,6 +18,22 @@
 
 ---
 
+## 🚨 使用前必看：VPK 内部路径不要含中文
+
+![Important](https://img.shields.io/badge/IMPORTANT-VPK路径不要含中文-red?style=for-the-badge)
+![Check](https://img.shields.io/badge/Before%20Convert-Check%20VPK%20Paths-orange?style=for-the-badge)
+
+> [!IMPORTANT]
+> **转换前请确认 VPK 内部的文件夹名、文件名、模型路径、材质路径、音效路径中没有中文字符。**
+>
+> 如果 VPK 内部存在中文字符，请先拆包，把中文路径或中文文件名改成英文、数字或下划线后，再导入本工具进行转换。
+>
+> 转换完成后，如果你必须保留原来的中文命名，可以再根据需要手动改回。
+>
+> 中文路径可能导致识别失败、打包异常、模型丢失、材质丢失、音效丢失，或者进游戏后无法正确加载。
+
+---
+
 ## 重要声明
 
 这是工具的**初版 / Initial Release**。当前版本已经可以完成基础的 VPK 武器转槽位流程，但不同 MOD 的模型、动画、音频制作方式并不完全一致，因此转换结果仍需要进游戏实测。
