@@ -183,7 +183,7 @@ flowchart LR
 
 ## 鸣谢
 
-特别感谢B站@ **Miztis** 对本工具制作与测试过程中的帮助。
+特别感谢B站 <a href="https://space.bilibili.com/513732571">Miztis</a> 对本工具制作与测试过程中的帮助。
 
 ---
 
